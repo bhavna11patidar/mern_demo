@@ -33,6 +33,9 @@ export default function Header() {
             <NavItem>
               <NavLink href="/about">About</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/register">Register</NavLink>
+            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
