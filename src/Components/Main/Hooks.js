@@ -12,13 +12,11 @@ export default function Hooks() {
     const [fname, setFname]=useState("");
     const[lname, setLname]=useState('');
 
-
-
-
     const setCount2=()=>{
         setCou(count2+1);
     }
    
+    
     return (
         <div className="container mt-5">
             <h1>Welcome {name}</h1>
