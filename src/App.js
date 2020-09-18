@@ -7,6 +7,8 @@ import About from './Components/Main/About';
 import Register from './Components/Main/Register';
 import Task from './Components/Main/Task';
 import Hooks from './Components/Main/Hooks';
+import RegisterWithUseState from './Components/Main/RegisterWithUseState';
+import toDoListState from './Components/Main/toDoListState';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route exact path="/register" component={Register}></Route>
           <Route exact path="/task" component={Task}></Route>
           <Route exact path="/hooks" component={Hooks}></Route>
+          <Route exact path="/register-hooks" component={RegisterWithUseState} />
+          <Route exact path="/todo-state" component={toDoListState} />
         </Router>
       </div>
     );

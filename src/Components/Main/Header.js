@@ -40,7 +40,13 @@ export default function Header() {
               <NavLink href="/task">Task</NavLink>
             </NavItem>
             <NavItem>
+              <NavLink href="/register-hooks">Register Hooks</NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink href="/hooks">Hooks</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/todo-state">To Do State</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
