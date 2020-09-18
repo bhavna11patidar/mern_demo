@@ -8,7 +8,6 @@ export default class toDoListState extends Component {
             title:"",
             data:[],
         }
-        this.OnDeleteClick=this.OnDeleteClick.bind(this);
     }
 
     onHandleChange=(e)=>{
@@ -22,8 +21,10 @@ export default class toDoListState extends Component {
         this.setState({data:newData});
 
     }
-    OnDeleteClick(){
-        console.log(1);
+     OnDeleteClick(a){
+         this.setState({
+             data:this.state.data.filter((d,i)=>{return i!=a;}),
+         })
     }
     render() {
         const {name,title,data}=this.state;
@@ -38,12 +39,13 @@ export default class toDoListState extends Component {
                 </div>
                 <div className="col-md-1">
                     <button className="btn btn-info" onClick={this.onButtonClick}>Add</button>
-                </div>
+                    </div>
                 </div>
 
-                <table className="table">
+                <table className="table table-bordered">
                     <thead>
                         <tr>
+                        <th>S. No</th>
                         <th>Name</th>
                         <th>Title</th>
                         <th>Action</th>
@@ -53,9 +55,10 @@ export default class toDoListState extends Component {
                         {
                         data.map((d,i)=>(
                             <tr>
-                                <td>{i} {d.name}</td>
+                                <td>{i+1}</td>
+                                <td>{d.name}</td>
                                 <td>{d.title}</td>
-                                <td><button onClick={this.OnDeleteClick(this)}>Delete</button></td>
+                                <td><button className="btn btn-danger" onClick={this.OnDeleteClick.bind(this,i)}>Delete</button></td>
                             </tr>
                         ))}
                     </tbody>
