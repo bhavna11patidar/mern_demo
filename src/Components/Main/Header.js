@@ -14,13 +14,14 @@ import {
     NavbarText
   } from 'reactstrap';
 
-export default function Header() {
+export default function Header(props) {
+
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     return (
         <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+    <NavbarBrand href="/">reactstrap {props.title}</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -47,6 +48,12 @@ export default function Header() {
             </NavItem>
             <NavItem>
               <NavLink href="/todo-state">To Do State</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/counter1">Counter 1</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/counter2">Counter 2</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>

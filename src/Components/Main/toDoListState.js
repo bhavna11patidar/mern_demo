@@ -19,6 +19,7 @@ export default class toDoListState extends Component {
         //console.log(this.state);
         var newData=this.state.data.concat({name:this.state.name, title:this.state.title});
         this.setState({data:newData});
+        this.setState({'name':"",title:""});
 
     }
      OnDeleteClick(a){
