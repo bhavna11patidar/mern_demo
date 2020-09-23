@@ -25,7 +25,7 @@ export default function Header(props) {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            {/*<NavItem>
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
@@ -50,10 +50,29 @@ export default function Header(props) {
               <NavLink href="/todo-state">To Do State</NavLink>
             </NavItem>
             <NavItem>
+              <NavLink href="/todo-hooks">To Do Hooks</NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink href="/counter1">Counter 1</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/counter2">Counter 2</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/mexport1">Multi Export 1</NavLink>
+            </NavItem>
+            
+            <NavItem>
+              <NavLink href="/mexport2">Multi Export 2</NavLink>
+            </NavItem>
+          */}
+
+        
+            <NavItem>
+              <NavLink href="/fc1">FC1</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/cc1">CC1</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
